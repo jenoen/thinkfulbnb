@@ -1,4 +1,8 @@
 /* -------  General Styles ------- */
+.logo {
+  display: flex;
+  justify-content: center;
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -127,12 +131,15 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   width: 80%;
 }
 
 .form-item {
   justify-content: center;
+  align-items: center;
   display: flex;
+  flex-direction: column;
 }
 
 form label {
@@ -168,10 +175,11 @@ footer p {
 
 /* -------  Media Query ------- */
 @media all and (min-width: 480px) {
-  form {
+  .form-item {
     width: 100%;
   }
   .logo {
+    display: flex;
     text-align: left;
     font-size: 50px;
   }
@@ -188,6 +196,7 @@ footer p {
   form {
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
 
   .group {
@@ -248,5 +257,57 @@ footer p {
     flex-direction: column;
     flex: 1;
     margin: 5px;
+  }
+}
+
+@media all and (max-width: 390px) {
+  .logo {
+    font-size: 45px;
+  }
+  .nav {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 1000px) and (min-width: 480px) {
+  form {
+    border: 2px solid #ff385c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 50%;
+  }
+
+  .form-item {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-weight: bold;
+  }
+
+  form select,
+  form input {
+    margin-bottom: 20px;
+    width: 180px;
+  }
+
+  form button {
+    background-color: #ff385c;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    width: 100%;
+  }
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
