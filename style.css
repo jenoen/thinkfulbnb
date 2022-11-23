@@ -180,8 +180,10 @@ footer p {
   header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+
     align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   nav {
     display: flex;
@@ -267,6 +269,16 @@ footer p {
   }
 }
 
+@media all and (min-width: 636px) {
+  header {
+    display: flex;
+    flex-direction: row;
+
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
 /*
 @media all and (max-width: 1000px) and (min-width: 480px) {
   form {
